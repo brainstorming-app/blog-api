@@ -1,0 +1,24 @@
+{
+  "development": {
+    "username": "blog",
+    "password": "blog",
+    "database": "blog",
+    "host": "localhost",
+    "port": 5442,
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "blog_test",
+    "host": "127.0.0.1:5443",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "blog_production",
+    "host": "127.0.0.1:5444",
+    "dialect": "postgres"
+  }
+}

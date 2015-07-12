@@ -1,0 +1,7 @@
+db:
+  image: postgres:latest
+  environment:
+    POSTGRES_USER: blog
+    POSTGRES_PASSWORD: blog
+  ports:
+    - "5442:5432"
