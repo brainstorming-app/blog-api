@@ -5,10 +5,9 @@ import router from './lib/router'
 import models from './lib/models'
 
 const server    = http.createServer()
-const port      = process.env.PORT || 3000
-const user      = process.env.DB_USER || 'api'
+const port      = process.env.PORT || 3150
+const user      = process.env.DB_USER || 'blog'
 const db      = process.env.DB_NAME || 'blog'
-const pwd      = process.env.DB_PWD || '123456'
 
 function onListening () {
   console.log(`im listening on http://localhost:${port}`)

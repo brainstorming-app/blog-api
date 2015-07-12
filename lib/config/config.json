@@ -11,14 +11,16 @@
     "username": "root",
     "password": null,
     "database": "blog_test",
-    "host": "127.0.0.1:5443",
+    "host": "localhost",
+    "port": 5442,
     "dialect": "postgres"
   },
   "production": {
     "username": "root",
     "password": null,
     "database": "blog_production",
-    "host": "127.0.0.1:5444",
+    "host": "localhost",
+    "port": 5442,
     "dialect": "postgres"
   }
 }
