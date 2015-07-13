@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/mocha --compilers js:mocha-traceur  --reporter spec --timeout 10000 test/*.test.js",
-    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec",
-    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "coverage": "./node_modules/.bin/istanbul cover _mocha -- --compilers js:mocha-traceur --report lcovonly",
     "start": "./node_modules/babel/bin/babel-node index.js"
   },
   "repository": {
@@ -17,6 +16,7 @@
     "body": "^5.1.0",
     "course": "0.0.1",
     "coveralls": "^2.11.2",
+    "istanbul-harmony": "^0.3.16",
     "mocha-lcov-reporter": "0.0.2",
     "mocha-traceur": "^2.1.0",
     "pg": "^4.4.0",
