@@ -19,3 +19,5 @@ server.on('listening', onListening)
 models.sequelize.sync().then(function () {
   server.listen(port);
 });
+
+export default server

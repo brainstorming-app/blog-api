@@ -4,7 +4,9 @@
   "description": "Building an API RESTful written in ECMAScript6 on IO.js",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "./node_modules/.bin/mocha --compilers js:mocha-traceur  --reporter spec --timeout 10000 test/*.test.js",
+    "coverage": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec",
+    "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
     "start": "./node_modules/babel/bin/babel-node index.js"
   },
   "repository": {
@@ -12,9 +14,11 @@
     "url": "git+https://alexispetalas@bitbucket.org/grapings/brainstorming-frontend.git"
   },
   "dependencies": {
-    "api-helpers": "^1.0.0",
     "body": "^5.1.0",
     "course": "0.0.1",
+    "coveralls": "^2.11.2",
+    "mocha-lcov-reporter": "0.0.2",
+    "mocha-traceur": "^2.1.0",
     "pg": "^4.4.0",
     "pg-hstore": "^2.3.2",
     "sequelize": "^3.3.2",
@@ -23,7 +27,11 @@
     "winston": "^1.0.0"
   },
   "devDependencies": {
-    "babel": "^5.6.7"
+    "babel": "^5.6.7",
+    "mocha": "*",
+    "supertest": "^1.0.1",
+    "should": ">= 0.0.1",
+    "expect.js": "0.3.1"
   },
   "author": "",
   "license": "ISC",
