@@ -4,12 +4,21 @@ import Supertest from 'supertest'
 let request = new Supertest(App)
 
 describe('Entry Actions', function() {
-  it('POST a Entry', function(done) {
+
+  it('GET a Entry', function(done) {
     request
-      .get('/').expect("hola vo", done);
+      .get('/posts')
+      .expect("[]", done);
   });
 
-  it('GET a Entry');
+  /*it('POST a Entry', function(done) {
+    request
+      .post('/posts')
+      .expect(201)
+      .end(done);
+  });*/
+
+  it('POST a Entry');
   it('GET search many Entrys with limit and offset');
   it('PUT change Entry');
 
