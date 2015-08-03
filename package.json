@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git+https://alexispetalas@bitbucket.org/grapings/brainstorming-frontend.git"
   },
+  "engines": {
+    "iojs": "2.3.1"
+  },
   "dependencies": {
     "body": "^5.1.0",
     "course": "0.0.1",
@@ -24,6 +27,7 @@
     "sequelize": "^3.3.2",
     "sequelize-cli": "^1.7.1",
     "sqlite3": "^3.0.8",
+    "babel": "^5.6.7",
     "winston": "^1.0.0"
   },
   "devDependencies": {
