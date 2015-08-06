@@ -9,6 +9,10 @@ describe('Entry Actions', function() {
   it('POST a Entry', function(done) {
     request
       .post('/posts')
+      .send({
+        title: 'titulo',
+        content: 'content'
+      })
       .expect(201)
       .end(done);
   });
@@ -17,7 +21,9 @@ describe('Entry Actions', function() {
     request
       .get('/posts')
       .expect(200)
-      .end(done);
+      .end(function(err, res){
+        done();
+      });
   });
 
 
